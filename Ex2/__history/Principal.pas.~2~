@@ -1,0 +1,39 @@
+unit Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+Numero: Integer;
+begin
+AllocConsole();
+Numero := 13;
+Writeln('Quero te contar meu número da sorte! é ' + Numero);
+Numero := 7;
+Writeln('Não, espera, é ' + Numero + '.. Ah esse era o da mamãe. O meu é' + Numero := 22);
+Numero := 20;
+Writeln('Já decidi: é ' + Numero + '! Bingo :)')
+end;
+
+end.

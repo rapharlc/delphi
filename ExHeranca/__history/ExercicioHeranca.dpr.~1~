@@ -1,0 +1,14 @@
+program ExercicioHeranca;
+
+uses
+  Vcl.Forms,
+  UPrincipal in 'UPrincipal.pas' {frmTelaPrincipal};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmTelaPrincipal, frmTelaPrincipal);
+  Application.Run;
+end.

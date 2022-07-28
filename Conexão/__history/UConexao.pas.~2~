@@ -1,0 +1,47 @@
+unit UConexao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, SkinAlterdata,
+  dxSkinsDefaultPainters, cxStyles, cxCustomData, cxFilter, cxData,
+  cxDataStorage, cxNavigator, dxDateRanges, Data.DB, cxDBData,
+  cxGridCustomTableView, cxGridTableView, cxGridDBTableView, MemDS, DBAccess,
+  Uni, SetupQuery, AlterdataConnection, cxGridLevel, cxClasses,
+  cxGridCustomView, cxGrid, cxLabel, Vcl.Menus, Vcl.StdCtrls, cxButtons;
+
+type
+  TForm1 = class(TForm)
+    cxlbl1: TcxLabel;
+    grdConexaoConexaoDBTableView1: TcxGridDBTableView;
+    cxgrdlvlConexaoLevel1: TcxGridLevel;
+    cxgrdConexao: TcxGrid;
+    con1: TAlterdataConnection;
+    ds1: TDataSource;
+    stpqry1: TSetupQuery;
+    nmempresa: TcxGridDBColumn;
+    nmfantasia: TcxGridDBColumn;
+    dtinicioatividade: TcxGridDBColumn;
+    btnAbrirConexao: TcxButton;
+    procedure btnAbrirConexaoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnAbrirConexaoClick(Sender: TObject);
+begin
+stpqry1.Open();
+end;
+
+end.

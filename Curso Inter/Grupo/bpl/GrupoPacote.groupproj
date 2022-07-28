@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{572A1B04-7059-43B4-8434-39E6E8C83316}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PacoteBpl.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\executaveis\executavel.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PacoteBpl">
+        <MSBuild Projects="PacoteBpl.dproj"/>
+    </Target>
+    <Target Name="PacoteBpl:Clean">
+        <MSBuild Projects="PacoteBpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PacoteBpl:Make">
+        <MSBuild Projects="PacoteBpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="executavel">
+        <MSBuild Projects="..\executaveis\executavel.dproj"/>
+    </Target>
+    <Target Name="executavel:Clean">
+        <MSBuild Projects="..\executaveis\executavel.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="executavel:Make">
+        <MSBuild Projects="..\executaveis\executavel.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PacoteBpl;executavel"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PacoteBpl:Clean;executavel:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PacoteBpl:Make;executavel:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

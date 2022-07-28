@@ -1,0 +1,199 @@
+inherited frmHeranca: TfrmHeranca
+  Caption = 'frmHeranca'
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 15
+  inherited grdTabela: TcxGrid
+    Left = -6
+    Top = 82
+    ExplicitLeft = -6
+    ExplicitTop = 82
+  end
+  inherited barManager: TdxBarManager
+    PixelsPerInch = 96
+  end
+  inherited prnRelatorio: TdxComponentPrinter
+    PixelsPerInch = 96
+    inherited prnLinkRelatorio: TdxGridReportLink
+      ReportDocument.CreationDate = 44754.758578125000000000
+      PixelsPerInch = 96
+      BuiltInReportLink = True
+    end
+  end
+  object connTeste: TAlterdataConnection
+    ProviderName = 'PostgreSQL'
+    Port = 5432
+    Database = 'ALTERDATA_PACK'
+    SpecificOptions.Strings = (
+      'SQL Server.LockTimeout=-1'
+      'PostgreSQL.ApplicationName=bds|Teste'
+      'PostgreSQL.Charset=Latin1')
+    Macros = <
+      item
+        Name = 'TRUE'
+        Value = 'True'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'FALSE'
+        Value = 'False'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'ISNUMERIC'
+        Value = 'ISNUMERIC'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'NEWID'
+        Value = 'NewId()'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'LIMIT_MACRO'
+        Value = ' LIMIT'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'TEMP'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'CREATE_TEMP'
+        Value = 'TEMPORARY '
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'GLOBAL_TEMP'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'CREATE_GLOBAL_TEMP'
+        Value = 'GLOBAL TEMPORARY '
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'REPLICATE'
+        Value = 'REPEAT'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'ALT_CURRENT_DATETIME'
+        Value = 'CURRENT_TIMESTAMP'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'Blob'
+        Value = 'BYTEA'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'Graphic'
+        Value = 'BYTEA'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'DateTime'
+        Value = 'TIMESTAMP'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'BCD'
+        Value = 'DECIMAL'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'Memo'
+        Value = 'TEXT'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'LargeInt'
+        Value = 'BIGINT'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'Boolean'
+        Value = 'BOOLEAN'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'AutoInc'
+        Value = 'SERIAL'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'LARGE_AUTOINC'
+        Value = 'BIGSERIAL'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'DOUBLE'
+        Value = 'DOUBLE PRECISION'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'Float'
+        Value = 'DOUBLE PRECISION'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'Currency'
+        Value = 'DOUBLE PRECISION'
+        Condition = 'PostgreSQL'
+      end
+      item
+        Name = 'QUOTE'
+        Value = '"'
+      end>
+    Username = 'SUPERVISOR'
+    Server = 'localhost'
+    Connected = True
+    LoginPrompt = False
+    AutoCreateSchema = True
+    Left = 8
+    Top = 176
+    EncryptedPassword = 'CEFFCDFFCCFFCBFFCAFFC9FFDEFF'
+  end
+  object qryTeste: TSetupQuery
+    Connection = connTeste
+    SQL.Strings = (
+      'SELECT'
+      '*'
+      'FROM'
+      'wphd.wphd'
+      'WHERE'
+      'section = '#39'Responsavel'#39)
+    DMLRefresh = True
+    SpecificOptions.Strings = (
+      'PostgreSQL.UnknownAsString=True'
+      'PostgreSQL.UseParamTypes=True')
+    Left = 8
+    Top = 224
+    object qryTestename: TStringField
+      FieldName = 'name'
+      Size = 50
+    end
+    object qryTestesection: TStringField
+      FieldName = 'section'
+      Size = 50
+    end
+    object qryTesteident: TStringField
+      FieldName = 'ident'
+      Size = 255
+    end
+    object qryTestevalue: TStringField
+      FieldName = 'value'
+      Size = 255
+    end
+    object qryTestememo: TBlobField
+      FieldName = 'memo'
+    end
+    object qryTesteregtype: TSmallintField
+      FieldName = 'regtype'
+    end
+    object qryTesteindice: TIntegerField
+      FieldName = 'indice'
+    end
+  end
+end

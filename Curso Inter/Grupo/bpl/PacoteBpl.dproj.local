@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/06/24 08:50:02.462,=rtl.dcp</Transaction>
+    <Transaction>2022/06/24 08:53:22.714,C:\dsn\Curso delphi\Curso Inter\Grupo\bpl\PacoteBpl.dproj=C:\Users\DSNPACK\Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2022/06/24 08:53:41.072,=C:\dsn\Curso delphi\Curso Inter\Grupo\bpl\Unit1.pas</Transaction>
+    <Transaction>2022/06/24 08:55:44.332,C:\dsn\Curso delphi\Curso Inter\Grupo\bpl\MainBpl.dfm=C:\dsn\Curso delphi\Curso Inter\Grupo\bpl\Unit1.dfm</Transaction>
+    <Transaction>2022/06/24 08:55:44.332,C:\dsn\Curso delphi\Curso Inter\Grupo\bpl\MainBpl.pas=C:\dsn\Curso delphi\Curso Inter\Grupo\bpl\Unit1.pas</Transaction>
+    <Transaction>2022/06/27 08:11:06.298,=vcl.dcp</Transaction>
+  </Transactions>
+  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="MainBpl.pas"/>
+    <File Path="MainBpl.dfm"/>
+    <File Path="rtl.dcp"/>
+    <File Path="vcl.dcp"/>
+  </ProjectSortOrder>
+</BorlandProject>
